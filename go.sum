@@ -1,0 +1,4 @@
+github.com/worldiety/template-go v0.0.0-20200317134027-2dbb3f876673 h1:vxvuhl4ED8X2BTePhzx2h8KJDr5kFIVE0b3aONCRpKc=
+github.com/worldiety/template-go v0.0.0-20200317134027-2dbb3f876673/go.mod h1:rlvHEO9n+D+RbFBiUOgezgW6gMKliRAFONwDoj6436Q=
+github.com/worldiety/tools v0.0.0-20200212095042-da9114d80da1 h1:AD5dldXMD09aA4n2ZfboeVHp/cXy9iG7kqui42PwQUA=
+github.com/worldiety/tools v0.0.0-20200212095042-da9114d80da1/go.mod h1:UWAhh+6RdP5npsQH++W2dgqdF4pTBEvzcpp3tWhHhV8=
