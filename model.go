@@ -16,8 +16,6 @@
 
 package wdydoc
 
-
-
 // A Discriminator returns a unique type name
 type Discriminator interface {
 	Type() string
@@ -39,8 +37,11 @@ func (w *Workspace) NewDocument() *Document {
 	return doc
 }
 
-// ById finds the first component identified by id or returns nil
+// ById finds the first component identified by id or returns nil. If id is empty, the workspace itself is returned.
 func (w *Workspace) ById(id string) Discriminator {
+	if id == "" {
+		return w
+	}
 	for _, r := range w.Resources {
 		if doc, ok := r.(*Document); ok {
 			if doc.Id == id {

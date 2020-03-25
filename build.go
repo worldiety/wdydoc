@@ -108,15 +108,16 @@ func (b *Build) provideTemplate(urlOrDir string) (string, error) {
 			}
 			return dstDir, nil
 		}
-		err := b.exec(dstDir, "git", "clone", urlOrDir, ".")
-		if err != nil {
-			return "", err
-		}
-		err = os.MkdirAll(dstDir, os.ModePerm)
+		err := os.MkdirAll(dstDir, os.ModePerm)
 		if err != nil {
 			return "", fmt.Errorf("failed to create template clone folder %s: %w", dstDir, err)
 		}
 
+		err = b.exec(dstDir, "git", "clone", urlOrDir, ".")
+		if err != nil {
+			return "", err
+		}
+		return dstDir, nil
 	}
 	if _, err := os.Stat(urlOrDir); err != nil {
 		return "", fmt.Errorf("cannot find template %s: %w", urlOrDir, err)

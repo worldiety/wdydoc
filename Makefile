@@ -5,7 +5,7 @@ ARTIFACT_NAME = wdydoc
 MODULE_PATH = github.com/worldiety/wdydoc
 
 ## the path which contains the main package to execute
-MAIN_PATH = 
+MAIN_PATH = github.com/worldiety/wdydoc/cmd
 
 ## for ldflags replacement
 BUILD_FILE_PATH = ${MODULE_PATH}

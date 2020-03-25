@@ -126,6 +126,9 @@ func optInt(m map[string]interface{}, key string) int {
 	if i, ok := m[key].(int64); ok {
 		return int(i)
 	}
+	if i, ok := m[key].(float64); ok {
+		return int(i)
+	}
 	return 0
 }
 

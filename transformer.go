@@ -21,6 +21,7 @@ import (
 	"fmt"
 	html "html/template"
 	"io"
+	"io/ioutil"
 	"os"
 	"path/filepath"
 	"strings"
@@ -152,4 +153,13 @@ func Unmarshal(b []byte) (*Workspace, error) {
 	w := &Workspace{}
 	w.fromJson(tmp)
 	return w, nil
+}
+
+// UnmarshalFile decodes a json markup file
+func UnmarshalFile(fname string) (*Workspace, error) {
+	b, err := ioutil.ReadFile(fname)
+	if err != nil {
+		return nil, fmt.Errorf("cannot parse %s: %w", fname, err)
+	}
+	return Unmarshal(b)
 }

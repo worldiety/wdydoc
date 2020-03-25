@@ -27,8 +27,9 @@ func TestOpen(t *testing.T) {
 		t.Fatal(err)
 	}
 	build.AddRule(&BuildRule{
-		Id:       "1234",
-		Template: "/Users/tschinke/tmp/muondoc-wdy-book-01-latex",
+		Id: "1234",
+		//Template: "/Users/tschinke/tmp/muondoc-wdy-book-01-latex",
+		Template: "https://github.com/worldiety/tmpl-doc-latex-book-01.git",
 		Name:     "mybook",
 	})
 
