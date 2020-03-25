@@ -23,10 +23,11 @@ Take a look at the [example file](example.pdf).
 ## usage
 Normally you use the API, however you can also use it from the commandline:
 ```bash
-# install with go get into ~/go/bin
+# install with go install into ~/go/bin
 # do not execute from within an existing go module
-go get github.com/worldiety/wdydoc
+go install github.com/worldiety/wdydoc/...
 
+# apply transformation
 wdydoc -id=1234 -in=example.json -out=.build -template=https://github.com/worldiety/tmpl-doc-latex-book-01.git    
 ```
 
